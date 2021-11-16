@@ -31,9 +31,8 @@ composer install
 
 #### Step 4: Start the local development server
 
-```
-Access the project's local site in the browser
-```
+Now you should be able to access the project's local site in the browser
+
 
 ### Unit Tests
 ```
