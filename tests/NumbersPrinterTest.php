@@ -3,6 +3,9 @@
 namespace Tests;
 
 use App\NumbersPrinter;
+use App\Rules\FalabellaRule;
+use App\Rules\IntegracionesRule;
+use App\Rules\ItRule;
 use PHPUnit\Framework\TestCase;
 
 class NumbersPrinterTest extends TestCase
@@ -12,13 +15,15 @@ class NumbersPrinterTest extends TestCase
      */
     public function canPrintFalabellaForMultiplesOfThree()
     {
-        $expected = 'Falabella';
+        $rules = [new FalabellaRule];
 
-        $printer = new NumbersPrinter;
+        $printer = new NumbersPrinter($rules);
 
-        $result = $printer->print(9);
+        $list = $printer->generateList(10);
 
-        $this->assertEquals($expected, $result);
+        $expected = ['1', '2', 'Falabella', '4', '5', 'Falabella', '7', '8', 'Falabella', '10'];
+
+        $this->assertEquals($expected, $list);
     }
 
     /**
@@ -26,40 +31,37 @@ class NumbersPrinterTest extends TestCase
      */
     public function canPrintITForMultiplesOfFive()
     {
-        $expected = 'IT';
+        $rules = [new ItRule];
 
-        $printer = new NumbersPrinter;
+        $printer = new NumbersPrinter($rules);
 
-        $result = $printer->print(10);
+        $list = $printer->generateList(20);
 
-        $this->assertEquals($expected, $result);
+        $expected = [
+            '1', '2', '3', '4', 'IT', '6', '7', '8', '9', 'IT',
+            '11', '12', '13', '14', 'IT', '16', '17', '18', '19', 'IT'
+        ];
+
+        $this->assertEquals($expected, $list);
     }
 
     /**
      * @test
      */
-    public function canPrintIntegracionesForMultiplesOfFive()
+    public function canPrintIntegracionesForMultiplesOfThreeAndFive()
     {
-        $expected = 'Integraciones';
+        $rules = [new IntegracionesRule];
 
-        $printer = new NumbersPrinter;
+        $printer = new NumbersPrinter($rules);
 
-        $result = $printer->print(30);
+        $list = $printer->generateList(20);
 
-        $this->assertEquals($expected, $result);
+        $expected = [
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
+            '11', '12', '13', '14', 'Integraciones', '16', '17', '18', '19', '20'
+        ];
+
+        $this->assertEquals($expected, $list);
     }
 
-    /**
-     * @test
-     */
-    public function canPrintNumberWhenIsMultipleOfNone()
-    {
-        $expected = '28';
-
-        $printer = new NumbersPrinter;
-
-        $result = $printer->print(28);
-
-        $this->assertEquals($expected, $result);
-    }
 }
