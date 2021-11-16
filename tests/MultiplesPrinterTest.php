@@ -2,13 +2,13 @@
 
 namespace Tests;
 
-use App\NumbersPrinter;
+use App\MultiplesPrinter;
 use App\Rules\FalabellaRule;
 use App\Rules\IntegracionesRule;
 use App\Rules\ItRule;
 use PHPUnit\Framework\TestCase;
 
-class NumbersPrinterTest extends TestCase
+class MultiplesPrinterTest extends TestCase
 {
     /**
      * @test
@@ -17,7 +17,7 @@ class NumbersPrinterTest extends TestCase
     {
         $rules = [new FalabellaRule];
 
-        $printer = new NumbersPrinter($rules);
+        $printer = new MultiplesPrinter($rules);
 
         $list = $printer->generateList(10);
 
@@ -33,7 +33,7 @@ class NumbersPrinterTest extends TestCase
     {
         $rules = [new ItRule];
 
-        $printer = new NumbersPrinter($rules);
+        $printer = new MultiplesPrinter($rules);
 
         $list = $printer->generateList(20);
 
@@ -52,7 +52,7 @@ class NumbersPrinterTest extends TestCase
     {
         $rules = [new IntegracionesRule];
 
-        $printer = new NumbersPrinter($rules);
+        $printer = new MultiplesPrinter($rules);
 
         $list = $printer->generateList(20);
 

@@ -1,5 +1,5 @@
 # Falabella Backend Dev - Technical Challenge
-## Numbers Printer
+## Multiples Printer
 
 App running live on: https://numbers-printer.herokuapp.com/
 

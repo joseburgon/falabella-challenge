@@ -2,7 +2,7 @@
 
 namespace App;
 
-class NumbersPrinter
+class MultiplesPrinter
 {
     private array $rules;
 

@@ -1,6 +1,6 @@
 <?php
 
-use App\NumbersPrinter;
+use App\MultiplesPrinter;
 use App\Rules\FalabellaRule;
 use App\Rules\IntegracionesRule;
 use App\Rules\ItRule;
@@ -13,7 +13,7 @@ $rules = [
     new ItRule
 ];
 
-$printer = new NumbersPrinter($rules);
+$printer = new MultiplesPrinter($rules);
 
 $list = $printer->generateList(100);
 
