@@ -1,11 +1,11 @@
 <?php
 
+require __DIR__ . '/vendor/autoload.php';
+
 use App\MultiplesPrinter;
 use App\Rules\FalabellaRule;
 use App\Rules\IntegracionesRule;
 use App\Rules\ItRule;
-
-require __DIR__ . '/vendor/autoload.php';
 
 $rules = [
     new IntegracionesRule,
