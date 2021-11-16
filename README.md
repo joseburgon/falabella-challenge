@@ -1,7 +1,7 @@
 # Falabella Backend Dev - Technical Challenge
 ## Multiples Printer
 
-App running live on: https://numbers-printer.herokuapp.com/
+App running live on: https://multiples-printer.herokuapp.com/
 
 ### Description
 Application that prints all the numbers from 1 to 100.   
