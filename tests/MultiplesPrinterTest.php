@@ -12,6 +12,7 @@ class MultiplesPrinterTest extends TestCase
 {
     /**
      * @test
+     * @covers \App\MultiplesPrinter
      */
     public function canPrintFalabellaForMultiplesOfThree()
     {
@@ -28,6 +29,7 @@ class MultiplesPrinterTest extends TestCase
 
     /**
      * @test
+     * @covers \App\MultiplesPrinter
      */
     public function canPrintITForMultiplesOfFive()
     {
@@ -47,6 +49,7 @@ class MultiplesPrinterTest extends TestCase
 
     /**
      * @test
+     * @covers \App\MultiplesPrinter
      */
     public function canPrintIntegracionesForMultiplesOfThreeAndFive()
     {

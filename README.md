@@ -36,6 +36,6 @@ Now you should be able to access the project's local site in the browser
 
 ### Unit Tests
 ```
-php vendor/bin/phpunit tests/NumbersPrinterTest.php
+php vendor/bin/phpunit tests/MultiplesPrinterTest.php
 ```
 
